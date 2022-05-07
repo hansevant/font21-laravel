@@ -4,9 +4,20 @@
 @section('container')
 
 <h2 class="pt-3">Total Pendaftar Day 1 : {{ $count }}</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form action="/dayone" method="get">
+            <input class="form-control w-100" name="search" type="search" placeholder="Cari seseorang?? ketikan nama tsb dan tekan enterrr" aria-label="Search">
+        </form>
+    </div>
+</div>
+
+@if (!$search)    
 <div class="pt-2">
     {{ $peserta->links() }}
 </div>
+@endif
+
 <div class="table-responsive mt-3">
     {{-- <a href="../config/reportexcel-day1.php" class="btn btn-success">Report Excel</a> --}}
     <table id="example" class="table table-striped table-bordered table-hover">

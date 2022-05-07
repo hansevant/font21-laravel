@@ -14,8 +14,8 @@ class DashboardController extends Controller
     {
         // untuk menghitung jumlah pendaftar dan menampilkannya
         $count = participant::get()->count();
-        $day1 = participant::where('acara', 'Day 1')->orWhere('acara', 'Both')->get()->count();
-        $day2 = participant::where('acara', 'Day 2')->orWhere('acara', 'Both')->get()->count();
+        $day1 = participant::whereIn('acara', ['Both', 'Day 1'])->get()->count();
+        $day2 = participant::whereNotIn('acara', ['Day 1'])->get()->count();
         $si = participant::where('jurusan', 'Sistem Informasi')->get()->count();
         $sk = participant::where('jurusan', 'Sistem Komputer')->get()->count();
         $depok = participant::where('domisili', '=', 'depok')->get()->count();
@@ -40,39 +40,61 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function dayone()
+    public function dayone(Request $request)
     {
+
+        $search = false;
+
+        if ($request->has('search')) {
+            $search = true;
+            $peserta = DB::table('participants')
+                ->where('nama', 'LIKE', '%' . $request->search . '%')
+                ->whereIn('acara', ['Both', 'Day 1'])
+                ->simplePaginate(10);
+        } else {
+            $peserta = DB::table('participants')
+                ->whereIn('acara', ['Both', 'Day 1'])
+                ->simplePaginate(10);
+        }
+
         $count = participant::where('acara', 'Day 1')
             ->orWhere('acara', 'Both')
             ->get()
             ->count();
 
-        $peserta = DB::table('participants')
-            ->where('acara', '=', 'Day 1')
-            ->orWhere('acara', 'Both')
-            ->simplePaginate(10);
-
         return view('dashboard.dayone', [
             'peserta' => $peserta,
-            'count' => $count
+            'count' => $count,
+            'search' => $search
         ]);
     }
 
-    public function daytwo()
+    public function daytwo(Request $request)
     {
+
+        $search = false;
+
+        if ($request->has('search')) {
+            $search = true;
+            $peserta = DB::table('participants')
+                ->where('nama', 'LIKE', '%' . $request->search . '%')
+                ->whereIn('acara', ['Both', 'Day 2'])
+                ->simplePaginate(10);
+        } else {
+            $peserta = DB::table('participants')
+                ->whereIn('acara', ['Both', 'Day 2'])
+                ->simplePaginate(10);
+        }
+
         $count = DB::table('participants')
-            ->where('acara', 'Day 2')
-            ->orWhere('acara', 'Both')
+            ->whereIn('acara', ['Both', 'Day 2'])
             ->get()
             ->count();
 
-        $peserta = participant::where('acara', 'Day 2')
-            ->orWhere('acara', 'Both')
-            ->simplePaginate(10);
-
         return view('dashboard.daytwo', [
             'peserta' => $peserta,
-            'count' => $count
+            'count' => $count,
+            'search' => $search
         ]);
     }
 
