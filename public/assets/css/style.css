@@ -1,0 +1,580 @@
+@font-face {
+    font-family: "nulshock" ;
+    src: url('nulshock\ bd.ttf') format('truetype');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+#home,.kolom p{
+    font-family: 'comic sans ms';
+}
+
+#home{
+    border-bottom: #ABABAB;
+}
+
+.reminder{
+    font-family: "nulshock", sans-serif;
+}
+
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#copyright a{
+    text-decoration: none;
+    font-size: 35px;
+}
+
+#materi img{
+    width:auto;
+    height: 417px;
+}
+
+#home img{
+    width:auto;
+    height: 417px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif;
+    
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    font-family: "nulshock", sans-serif;
+    color: white;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky; 
+    top: 0;
+    background-image: url(../img/attribute/banner.jpg);
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 18px 8px 18px;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+nav ul li a:hover {
+    color: black;
+    background: white;
+    border-radius: 5px;
+}
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.kolom {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#home .kolom{
+    margin-left: 30px;
+}
+
+#materi{
+    border-top: 4px solid #364f6b3b;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #3a2a5f;
+}
+
+
+h2 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color:rebeccapurple ;
+    width: 100%;
+    line-height: 50px;
+}
+
+
+h3{
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #3a2a5f;
+    width: 100%;
+    line-height: 50px; 
+}
+
+a.tbl-biru {
+    background: #9b59b6;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 8px 18px 8px 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 1s;
+    border: 2px solid white;
+}
+
+a.tbl-biru:hover {
+    background: #0e466b;
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+    padding-right: 200px;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+#speakers{
+    background-image: url(../img/attribute/vb.png);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+#speakers h2{
+    color: white;
+}
+
+#speakers p{
+    color: white;
+}
+
+.tengah {
+    text-align: center;
+    width: 100%;
+}
+
+.tutor-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kartu-tutor {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-tutor img {
+    width: 80%;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.kartu-tutor h6 {
+    margin: 20px 0;
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.kartu-tutor p {
+    font-weight: 500;
+    text-align: center;
+    color: #6e6e6e;
+}
+
+.kartu-mc {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.kartu-mc img {
+    width: 80%;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.kartu-mc h6 {
+    margin: 20px 0;
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.kartu-mc p {
+    font-weight: 500;
+    text-align: center;
+    color: #6e6e6e;
+}
+
+#contact {
+    background: #dedede;
+    padding:50px 0px 50px 0px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-section {
+    width: 20%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #3a2a5f;
+    width: 100%;
+    line-height: 50px;
+}
+
+#copyright {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    margin-top: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+}
+
+@media screen and (max-width: 1100px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .balls{
+        display: none;
+    }
+
+    .logo a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .menu {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav .menu ul {
+        text-align: center;
+        margin: auto;
+        line-height: 60px;
+    }
+
+    nav .menu ul li {
+        display: inline-block;
+        float: none;
+    }
+
+    section {
+        display: block;
+    }
+
+    section img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    #home img{
+        width:100%;
+        height: 100%;
+        max-width: 320px;
+        margin: auto;
+    }
+
+    #materi img{
+        width:100%;
+        height: 100%;
+    }
+    
+    #home .kolom{
+        margin-left: 0px;
+    }
+    
+    .speakers img{
+        margin-left: 10%;
+    }
+
+    #speakers{
+        background: #eee;
+    }
+
+    .kartu-tutor {
+        width: 60%;
+    }
+
+    .kartu-tutor h6 {
+        margin: 20px 0;
+        font-family: 'comic sans ms';
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+        color: #364f6b;
+    }
+
+    .kartu-mc {
+        width: 60%;
+    }
+
+    .kartu-mc h6 {
+        margin: 20px ;
+        font-family: 'comic sans ms';
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+        color: #364f6b;
+    }
+    
+    #speakers h2{
+        color: #364f6b;
+    }
+    
+    #speakers p{
+        color: #364f6b;
+    }
+
+    #speakers{
+        padding-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 496px) {
+
+    .logo a {
+        font-size: 40px;
+    }
+
+       nav ul li a{ font-size: 14px;}
+
+    /* .menu{
+        display: none;
+    } */
+
+}
+
+@media (max-width: 425px) {
+
+    .logo a {
+        font-size: 30px;
+    }
+
+    #home img{
+        width:100%;
+        height: 100%;
+        max-width: 250px;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+        .menu{
+        display: none;
+    }
+
+    #home img{
+        width:100%;
+        height: 100%;
+        max-width: 150px;
+        margin: auto;
+    }
+
+}
+
+
+#red {
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+    left: 8%;
+    animation-timing-function: linear;
+  }
+  #blue {
+    background: linear-gradient(-135deg, #71b7e6,#9b59b6);
+    left: 88%;
+    animation-timing-function: linear;
+  }
+
+  .balls {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    animation-name: jump;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes jump {
+    50% {
+      top: 10%;
+    }
+  }
+
+  
+  .kartu-tutor img:hover {
+    transform: scale(2);
+    box-shadow: 0px 0px 40px #9b59b6;
+    transition: 2s;
+}
+
+#rect {
+    animation-name: rainbow;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    text-shadow: 4px 4px rgb(148, 147, 147);
+  }
+
+  @keyframes rainbow {
+    0% {
+      color: indigo;
+    }
+    10% {
+      color:rebeccapurple ;
+    }
+    20% {
+      color: indigo;  
+    }
+    30% {
+      color: rebeccapurple;
+    }
+    40% {
+      color: indigo;
+    }
+    50% {
+      color: rebeccapurple;
+    }
+    60% {
+      color: indigo;
+    }
+    70% {
+      color:rebeccapurple ;
+    }
+    80% {
+      color: indigo;
+    }
+    90% {
+      color: rebeccapurple;
+    }
+    100% {
+    color: indigo;
+      }
+    }
+
+    #atass{
+        animation-name: geter;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes geter {
+        0%{
+            font-size: 50px;
+        }
+
+        25%{
+            font-size: 70px;
+        }
+
+        50%{
+            font-size: 50px;
+        }
+
+        75%{
+            font-size: 70px;
+        }
+
+        100%{
+            font-size: 50px;
+        }
+    } 
+
+    #stroke{
+        animation-name: stroke;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes stroke {
+        0%{
+            transform: translateX(10px);
+        }
+
+        25%{
+            transform: translateX(20px);
+        }
+
+        50%{
+            transform: translateX(10px);
+        }
+
+        75%{
+            transform: translateX(20px);
+        }
+
+        100%{
+            transform: translateX(10px);
+        }
+    } 
+
+    
