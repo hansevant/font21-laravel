@@ -13,7 +13,7 @@
 
 _Below is an example of how you can instruct your audience on installing and setting up your app._
 
-1. Clone the repo
+1. Clone the repo and move to the folder
 
     ```sh
     git clone https://github.com/hansevant/font21-laravel.git
@@ -27,23 +27,34 @@ _Below is an example of how you can instruct your audience on installing and set
 
 3. Copy `.env.example` to `.env` and fill in the missing values, and run
 
+4. Generate the APP_KEY
+
     ```sh
     php artisan key:generate
     ```
 
-    for generate the APP_KEY
-
-4. Run database migration and seed
+5. Creaete the database with same name in .env files
+6. Run database migration and seed
 
     ```sh
     php artisan migrate
     ```
 
-5. Run factory faker seeder
+7. Run factory faker seeder (optional)
 
     ```sh
     php artisan db:seed
     ```
 
-6. Run the server
+8. Run the server
    ✈️✈️✈️
+   
+____
+/ : user (root) <br>
+/login : admin
+____
+   
+### credentials admin 
+
+ username : admin <br>
+ password : admin 
