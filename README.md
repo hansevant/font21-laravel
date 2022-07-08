@@ -1,4 +1,4 @@
-<h1 align="center" style="font-size:24px;">Website Pendaftaran FIKTI ON TALK 2021 dengan LARAVEL 8</h1>
+<h1 align="center" style="font-size:24px;">Website FIKTI ON TALK 2021 dengan LARAVEL 8</h1>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
