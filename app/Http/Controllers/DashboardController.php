@@ -14,16 +14,16 @@ class DashboardController extends Controller
     {
         // untuk menghitung jumlah pendaftar dan menampilkannya
         $count = participant::get()->count();
-        $day1 = participant::whereIn('acara', ['Both', 'Day 1'])->get()->count();
-        $day2 = participant::whereNotIn('acara', ['Day 1'])->get()->count();
-        $si = participant::where('jurusan', 'Sistem Informasi')->get()->count();
-        $sk = participant::where('jurusan', 'Sistem Komputer')->get()->count();
-        $depok = participant::where('domisili', '=', 'depok')->get()->count();
-        $kalimalang = participant::where('domisili', 'kalimalang')->get()->count();
-        $karawaci = participant::where('domisili', 'karawaci')->get()->count();
-        $salemba = participant::where('domisili', 'salemba')->get()->count();
-        $cengkareng = participant::where('domisili', 'cengkareng')->get()->count();
-        $simatupang = participant::where('domisili', 'simatupang')->get()->count();
+        $day1 = participant::whereIn('acara', ['Both', 'Day 1'])->count();
+        $day2 = participant::whereNotIn('acara', ['Day 1'])->count();
+        $si = participant::where('jurusan', 'Sistem Informasi')->count();
+        $sk = participant::where('jurusan', 'Sistem Komputer')->count();
+        $depok = participant::where('domisili', '=', 'depok')->count();
+        $kalimalang = participant::where('domisili', 'kalimalang')->count();
+        $karawaci = participant::where('domisili', 'karawaci')->count();
+        $salemba = participant::where('domisili', 'salemba')->count();
+        $cengkareng = participant::where('domisili', 'cengkareng')->count();
+        $simatupang = participant::where('domisili', 'simatupang')->count();
 
         return view('dashboard.index', [
             'count' => $count,
@@ -59,7 +59,6 @@ class DashboardController extends Controller
 
         $count = participant::where('acara', 'Day 1')
             ->orWhere('acara', 'Both')
-            ->get()
             ->count();
 
         return view('dashboard.dayone', [
@@ -88,7 +87,6 @@ class DashboardController extends Controller
 
         $count = DB::table('participants')
             ->whereIn('acara', ['Both', 'Day 2'])
-            ->get()
             ->count();
 
         return view('dashboard.daytwo', [
