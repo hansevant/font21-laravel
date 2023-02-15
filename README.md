@@ -33,7 +33,7 @@ _Below is an example of how you can instruct your audience on installing and set
     php artisan key:generate
     ```
 
-5. Creaete the database with same name in .env files
+5. Create the database with same name in .env files
 6. Run database migration and seed
 
     ```sh
